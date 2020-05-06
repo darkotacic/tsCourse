@@ -1,17 +1,10 @@
 import { User } from './models/User';
+import axios from 'axios';
 
-const user = new User({ name: 'My name', age: 20 });
+let user: User = new User({ id: 1 });
 
-user.on('darko', () => {
-  console.log('HELLO WORLD123123 TAMCE TAMCE');
-});
+user.set({ name: 'NEW NAME13', age: 50 });
 
-user.on('darko', () => {
-  console.log('HELLO WORLD1234 TAMARA');
-});
+let user2: User = new User({ name: 'Darko123', age: 0 });
 
-user.on('darko', () => {
-  console.log('HELLO WORLD TAMARA TAMCI <3 TAMCE');
-});
-
-user.trigger('darko');
+user.save();
