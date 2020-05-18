@@ -1,4 +1,3 @@
-import { UserProps } from './User';
 import axios, { AxiosPromise } from 'axios';
 
 interface HasId {
