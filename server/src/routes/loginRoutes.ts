@@ -1,3 +1,4 @@
+import { AppRouter } from './../AppRouter';
 import { Router, Request, Response, NextFunction } from 'express';
 
 interface RequestWithBody extends Request {
@@ -16,8 +17,6 @@ function requireAuth(req: Request, res: Response, next: NextFunction): void {
 }
 
 const router = Router();
-
-
 
 router.post('/login', (req: RequestWithBody, res: Response) => {
   const { email, password } = req.body;
